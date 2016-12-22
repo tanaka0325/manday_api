@@ -10,6 +10,11 @@ class TasksController < ApplicationController
     render json: @task
   end
 
+  def date
+    @tasks = Task.where('date' => params[:date])
+    render json: @tasks
+  end
+
   def create
     @task = Task.new(task_params)
 

@@ -10,6 +10,11 @@ class ReportsController < ApplicationController
     render json: @report
   end
 
+  def date
+    @reports = Report.where('date' => params[:date])
+    render json: @reports
+  end
+
   def create
     @report = Report.new(report_params)
 

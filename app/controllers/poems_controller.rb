@@ -10,6 +10,11 @@ class PoemsController < ApplicationController
     render json: @poem
   end
 
+  def date
+    @poems = Poem.where('date' => params[:date])
+    render json: @poems
+  end
+
   def create
     @poem = Poem.new(poem_params)
 
