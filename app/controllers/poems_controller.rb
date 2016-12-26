@@ -1,4 +1,5 @@
 class PoemsController < ApplicationController
+  before_action :authenticate_user
   before_action :set_poem, only: [:show, :update, :destroy]
 
   def index
