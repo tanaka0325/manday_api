@@ -35,6 +35,7 @@ class PoemsController < ApplicationController
 
   def destroy
     @poem.destroy
+    render json: {}
   end
 
   private

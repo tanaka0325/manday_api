@@ -35,6 +35,7 @@ class ReportsController < ApplicationController
 
   def destroy
     @report.destroy
+    render json: {}
   end
 
   private
