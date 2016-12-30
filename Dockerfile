@@ -2,7 +2,7 @@ FROM ruby:2.3.3
 
 RUN /bin/cp -f /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
-ENV APP_ROOT /usr/src/nippo2
+ENV APP_ROOT /usr/src/streamer
 WORKDIR $APP_ROOT
 
 RUN apt-get update -qq && \
