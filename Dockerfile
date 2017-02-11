@@ -2,7 +2,7 @@ FROM ruby:2.3.3
 
 RUN /bin/cp -f /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
-ENV APP_ROOT /usr/src/streamer
+ENV APP_ROOT /usr/src/manday
 WORKDIR $APP_ROOT
 
 RUN apt-get update -qq && \
